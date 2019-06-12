@@ -1,12 +1,14 @@
 const Discord = require('discord.js');
 
-exports.run = async (client, message, args) => {
+exports.run = async (client, message) => {
+  const m = await message.channel.send("Pinging! Give me a moment...");
   const pingembed = new Discord.RichEmbed()
     .setColor(client.color.blue)
     .setTimestamp()
     .setAuthor("WikiBOT's Ping:")
-    .setDescription(`⌛ **${Math.round(client.ping)}ms**`)
+    .addField("API Latency:", `**${Math.round(client.ping)}ms**`)
+    .addField("Client Latency:", `**${m.createdTimestamp - message.createdTimestamp}ms**`)
     .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
-  message.channel.send(pingembed).then(msg => { msg.delete(5000) }).catch(e => { console.log(e) });
+  m.edit(pingembed).then(msg => { msg.delete(5000) }).catch(e => { console.log(e) });
   message.delete(5000)
 }
