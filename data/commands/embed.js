@@ -1,6 +1,6 @@
 const Discord = require('discord.js')
 
-exports.run = (client, message) => {
+exports.run = (client, message, args) => {
     let title = args[0]
     let message1 = args[1]
 
