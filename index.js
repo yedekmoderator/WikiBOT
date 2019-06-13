@@ -21,11 +21,31 @@ fs.readdir("./data/events/", (err, files) => {
   
   client.commands = new Enmap();
   
-  fs.readdir("./data/commands/", (err, files) => {
+  fs.readdir("./data/commands/info", (err, files) => {
     if (err) return console.error(err);
     files.forEach(file => {
       if (!file.endsWith(".js")) return;
-      let props = require(`./data/commands/${file}`);
+      let props = require(`./data/commands/info/${file}`);
+      let commandName = file.split(".")[0];
+      client.commands.set(commandName, props);
+    });
+  });
+
+  fs.readdir("./data/commands/tools", (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+      if (!file.endsWith(".js")) return;
+      let props = require(`./data/commands/tools/${file}`);
+      let commandName = file.split(".")[0];
+      client.commands.set(commandName, props);
+    });
+  });
+
+  fs.readdir("./data/commands/op", (err, files) => {
+    if (err) return console.error(err);
+    files.forEach(file => {
+      if (!file.endsWith(".js")) return;
+      let props = require(`./data/commands/op/${file}`);
       let commandName = file.split(".")[0];
       client.commands.set(commandName, props);
     });
