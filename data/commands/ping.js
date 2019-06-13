@@ -7,7 +7,7 @@ exports.run = async (client, message) => {
     .setTimestamp()
     .setAuthor("WikiBOT's Ping:")
     .addField("API Latency:", `**${Math.round(client.ping)}ms**`)
-    .addField("Client Latency:", `**${m.createdTimestamp - message.createdTimestamp}ms**`)
+    .addField("Message Latency:", `**${m.createdTimestamp - message.createdTimestamp}ms**`)
     .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
   m.edit(pingembed).then(msg => { msg.delete(5000) }).catch(e => { console.log(e) });
   message.delete(5000)
