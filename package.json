@@ -1,4 +1,7 @@
 {
+    "name": "wikibot",
+    "author": "iWikipedia",
+    "description": "iWikipedia's helpful twin",
     "main": "index.js",
     "dependencies": {
         "discord.js": "^11.5.1",

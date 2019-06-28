@@ -22,8 +22,8 @@ module.exports = async (client, message) => {
       .setAuthor('❌ Command not found!')
       .setDescription(`Try **${client.prefix}help** to find the command you're looking for.`)
       .setTimestamp()
-      .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
-    message.delete(5000)
+      .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL);
+    message.delete(5000);
     return message.channel.send(nocmdfound).then(m => { m.delete(5000) });
   }
 

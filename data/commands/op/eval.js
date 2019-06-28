@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
           return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
         else
             return text;
-      }
+      };
     if(message.author.id !== "423981124822368276") return;
     try {
       const code = args.join(" ");
@@ -17,4 +17,4 @@ exports.run = (client, message, args) => {
     } catch (err) {
       message.channel.send(`\`ERROR\` \`\`\`xl\n${clean(err)}\n\`\`\``);
     }
-}
+};

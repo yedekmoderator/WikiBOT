@@ -1,8 +1,8 @@
-const Discord = require('discord.js')
+const Discord = require('discord.js');
 
 exports.run = (client, message, args) => {
-    let title = args[0]
-    let message1 = args[1]
+    let title = args[0];
+    let message1 = args[1];
 
     if(!title) {
         let notitle = new Discord.RichEmbed()
@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
             .setDescription("No title was provided!")
             .addField("Correct Usage:", "**``" + client.prefix + "embed <title> <message>``**")
             .setTimestamp()
-            .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
+            .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL);
         return message.channel.send(notitle).then(m => { m.delete(3000); message.delete(3000) })
     } 
 
@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
             .setDescription("No message was provided!")
             .addField("Correct Usage:", "**``" + client.prefix + "embed <title> <message>``**")
             .setTimestamp()
-            .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
+            .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL);
         return message.channel.send(notitle).then(m => { m.delete(3000); message.delete(3000) })
     }
 
@@ -31,6 +31,6 @@ exports.run = (client, message, args) => {
         .setAuthor(title)
         .setDescription(message1)
         .setTimestamp()
-        .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL)
+        .setFooter(`Command issued by ${message.author.tag}`, message.author.avatarURL);
     message.channel.send(embedmsg)
-}
+};
