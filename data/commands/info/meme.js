@@ -16,7 +16,7 @@ exports.run = async (client, message) => {
         embed.addField(`${memeTitle}`, `[View thread](${memeUrl})`);
         embed.setImage(memeImage);
         embed.setFooter(`👍 ${memeUpvotes} 👎 ${memeDownvotes} 💬 ${memeNumComments}`);
-        msg.channel.send(embed)
+        message.channel.send(embed)
             .then(sent => console.log(`Sent a reply to ${sent.author.username}`))
         console.log('Bot responded with: ' + memeImage);
     }).catch(console.error);
