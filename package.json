@@ -5,6 +5,7 @@
     "main": "index.js",
     "dependencies": {
         "discord.js": "^11.5.1",
-        "enmap": "^4.8.7"
+        "enmap": "^4.8.7",
+        "got": "^9.6.0"
     }
 }
