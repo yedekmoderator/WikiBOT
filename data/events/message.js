@@ -5,8 +5,6 @@ module.exports = async (client, message) => {
 
   if (message.author.bot) return;
 
-  if (message.guild === null) return;
-
   if (message.content.indexOf(client.prefix) !== 0) return;
 
   const args = message.content.slice(client.prefix.length).trim().split(/ +/g);
