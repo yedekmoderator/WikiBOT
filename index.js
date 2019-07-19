@@ -51,4 +51,56 @@ fs.readdir("./data/commands/op", (err, files) => {
     });
 });
 
+client.on('message', message => {
+
+    if(message.content === "hey wiki") {
+
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+        message.channel.send("spam");
+
+}
+
+})
+
 client.login(process.env.BOT_TOKEN);
